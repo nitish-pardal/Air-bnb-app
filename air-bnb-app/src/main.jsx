@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDom from 'react-dom/client';
-import Navbar from "../components/Navbar";
-import Hero from '../components/Hero';
 import "./index.css";
+import App from '../components/App.jsx';
+
 
 ReactDom.createRoot(document.getElementById('root')).render(
   <div>
-     <Navbar />
-     <Hero />
+     <App />
   </div>
  
 );
