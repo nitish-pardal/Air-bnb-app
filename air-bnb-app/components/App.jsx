@@ -12,6 +12,7 @@ export default function App(){
   const Cardsdata =data.map((card)=>{
     return(
     <Cards
+    key={card.id}
     img = {card.coverImg}
     rating = {card.stats.rating}
     reviewCount= {card.stats.reviewCount}
@@ -19,11 +20,14 @@ export default function App(){
     title = {card.title}
     price = {card.price}
     />)
-  })
+  });
 return (
   <div>
     <Navbar />
+    <section className = "card-list">
     {Cardsdata}
+    </section>
+
   </div> 
 );
 }
