@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Hero from './Hero';
 import Cards from './Card';
 import data from "./data.jsx"
-//<Hero />
 
 
 export default function App(){
@@ -13,17 +12,14 @@ export default function App(){
     return(
     <Cards
     key={card.id}
-    img = {card.coverImg}
-    rating = {card.stats.rating}
-    reviewCount= {card.stats.reviewCount}
-    country = {card.location}
-    title = {card.title}
-    price = {card.price}
-    />)
-  });
-return (
-  <div>
+    card={card}
+    />
+    )});
+    
+    return (
+      <div>
     <Navbar />
+    <Hero />
     <section className = "card-list">
     {Cardsdata}
     </section>
